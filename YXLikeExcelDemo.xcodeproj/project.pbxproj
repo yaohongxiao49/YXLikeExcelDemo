@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		846ABC1E25A6DE120076F4B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC1D25A6DE120076F4B9 /* AppDelegate.m */; };
+		846ABC2425A6DE120076F4B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC2325A6DE120076F4B9 /* ViewController.m */; };
+		846ABC2925A6DE140076F4B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846ABC2825A6DE140076F4B9 /* Assets.xcassets */; };
+		846ABC2C25A6DE140076F4B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846ABC2A25A6DE140076F4B9 /* LaunchScreen.storyboard */; };
+		846ABC2F25A6DE140076F4B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC2E25A6DE140076F4B9 /* main.m */; };
+		846ABC3925A6DE140076F4B9 /* YXLikeExcelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC3825A6DE140076F4B9 /* YXLikeExcelDemoTests.m */; };
+		846ABC4425A6DE140076F4B9 /* YXLikeExcelDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC4325A6DE140076F4B9 /* YXLikeExcelDemoUITests.m */; };
+		846ABC6825A6DF820076F4B9 /* YXExcelObjBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC6625A6DF820076F4B9 /* YXExcelObjBaseView.m */; };
+		846ABC7F25A6E0DB0076F4B9 /* YXExcelObjBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC7E25A6E0DB0076F4B9 /* YXExcelObjBgView.m */; };
+		846ABC9825A6E2100076F4B9 /* YXExcelObjBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABC9725A6E2100076F4B9 /* YXExcelObjBaseModel.m */; };
+		846ABCBC25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABCBB25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m */; };
+		846ABCC425A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ABCC325A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib */; };
+		846ABCCB25A6EC710076F4B9 /* YXExcelObjBgViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABCC925A6EC710076F4B9 /* YXExcelObjBgViewCell.m */; };
+		846ABCCC25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ABCCA25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib */; };
+		846ABCD325A6F1040076F4B9 /* YXExcelObjDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABCD225A6F1040076F4B9 /* YXExcelObjDetailView.m */; };
+		846ABD1325A6FAAB0076F4B9 /* YXExcelObjChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD1225A6FAAB0076F4B9 /* YXExcelObjChooseView.m */; };
+		846ABD1B25A6FAB40076F4B9 /* YXExcelObjChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ABD1A25A6FAB40076F4B9 /* YXExcelObjChooseView.xib */; };
+		846ABD2125A6FC2A0076F4B9 /* YXExcelObjBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD2025A6FC2A0076F4B9 /* YXExcelObjBasicView.m */; };
+		846ABD3625A701400076F4B9 /* YXExcelObjDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */; };
+		846ABD4E25A70A220076F4B9 /* NSObject+YXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */; };
+		CD8CFCFFB8D1C0BA528809E6 /* libPods-YXLikeExcelDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7AE6C73B7AA9F52824093B /* libPods-YXLikeExcelDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		846ABC3525A6DE140076F4B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846ABC1125A6DE120076F4B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846ABC1825A6DE120076F4B9;
+			remoteInfo = YXLikeExcelDemo;
+		};
+		846ABC4025A6DE140076F4B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846ABC1125A6DE120076F4B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846ABC1825A6DE120076F4B9;
+			remoteInfo = YXLikeExcelDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B7AE6C73B7AA9F52824093B /* libPods-YXLikeExcelDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXLikeExcelDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846ABC1925A6DE120076F4B9 /* YXLikeExcelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXLikeExcelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846ABC1C25A6DE120076F4B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		846ABC1D25A6DE120076F4B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		846ABC2225A6DE120076F4B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		846ABC2325A6DE120076F4B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		846ABC2825A6DE140076F4B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		846ABC2B25A6DE140076F4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		846ABC2D25A6DE140076F4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846ABC2E25A6DE140076F4B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		846ABC3425A6DE140076F4B9 /* YXLikeExcelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXLikeExcelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		846ABC3825A6DE140076F4B9 /* YXLikeExcelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXLikeExcelDemoTests.m; sourceTree = "<group>"; };
+		846ABC3A25A6DE140076F4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846ABC3F25A6DE140076F4B9 /* YXLikeExcelDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXLikeExcelDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		846ABC4325A6DE140076F4B9 /* YXLikeExcelDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXLikeExcelDemoUITests.m; sourceTree = "<group>"; };
+		846ABC4525A6DE140076F4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846ABC6625A6DF820076F4B9 /* YXExcelObjBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBaseView.m; sourceTree = "<group>"; };
+		846ABC6725A6DF820076F4B9 /* YXExcelObjBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBaseView.h; sourceTree = "<group>"; };
+		846ABC7D25A6E0DB0076F4B9 /* YXExcelObjBgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBgView.h; sourceTree = "<group>"; };
+		846ABC7E25A6E0DB0076F4B9 /* YXExcelObjBgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBgView.m; sourceTree = "<group>"; };
+		846ABC9425A6E19D0076F4B9 /* YXExcelObjDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDelegate.h; sourceTree = "<group>"; };
+		846ABC9625A6E2100076F4B9 /* YXExcelObjBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBaseModel.h; sourceTree = "<group>"; };
+		846ABC9725A6E2100076F4B9 /* YXExcelObjBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBaseModel.m; sourceTree = "<group>"; };
+		846ABCB425A6E5280076F4B9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		846ABCBA25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBgSecHeaderView.h; sourceTree = "<group>"; };
+		846ABCBB25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBgSecHeaderView.m; sourceTree = "<group>"; };
+		846ABCC325A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXExcelObjBgSecHeaderView.xib; sourceTree = "<group>"; };
+		846ABCC825A6EC710076F4B9 /* YXExcelObjBgViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBgViewCell.h; sourceTree = "<group>"; };
+		846ABCC925A6EC710076F4B9 /* YXExcelObjBgViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBgViewCell.m; sourceTree = "<group>"; };
+		846ABCCA25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXExcelObjBgViewCell.xib; sourceTree = "<group>"; };
+		846ABCD125A6F1040076F4B9 /* YXExcelObjDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailView.h; sourceTree = "<group>"; };
+		846ABCD225A6F1040076F4B9 /* YXExcelObjDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjDetailView.m; sourceTree = "<group>"; };
+		846ABD1125A6FAAB0076F4B9 /* YXExcelObjChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjChooseView.h; sourceTree = "<group>"; };
+		846ABD1225A6FAAB0076F4B9 /* YXExcelObjChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjChooseView.m; sourceTree = "<group>"; };
+		846ABD1A25A6FAB40076F4B9 /* YXExcelObjChooseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXExcelObjChooseView.xib; sourceTree = "<group>"; };
+		846ABD1F25A6FC2A0076F4B9 /* YXExcelObjBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBasicView.h; sourceTree = "<group>"; };
+		846ABD2025A6FC2A0076F4B9 /* YXExcelObjBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBasicView.m; sourceTree = "<group>"; };
+		846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjDetailCell.m; sourceTree = "<group>"; };
+		846ABD3525A701400076F4B9 /* YXExcelObjDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailCell.h; sourceTree = "<group>"; };
+		846ABD4C25A70A220076F4B9 /* NSObject+YXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YXCategory.h"; sourceTree = "<group>"; };
+		846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YXCategory.m"; sourceTree = "<group>"; };
+		90D569F0C1D3487AD78DC119 /* Pods-YXLikeExcelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.release.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FE78F181227266BB90285CD0 /* Pods-YXLikeExcelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		846ABC1625A6DE120076F4B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8CFCFFB8D1C0BA528809E6 /* libPods-YXLikeExcelDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3125A6DE140076F4B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3C25A6DE140076F4B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		846ABC1025A6DE120076F4B9 = {
+			isa = PBXGroup;
+			children = (
+				846ABC1B25A6DE120076F4B9 /* YXLikeExcelDemo */,
+				846ABC3725A6DE140076F4B9 /* YXLikeExcelDemoTests */,
+				846ABC4225A6DE140076F4B9 /* YXLikeExcelDemoUITests */,
+				846ABC1A25A6DE120076F4B9 /* Products */,
+				AA18D19EE7F59298F1D95C8C /* Pods */,
+				E2B38D5D543385AD0FB5E01E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		846ABC1A25A6DE120076F4B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC1925A6DE120076F4B9 /* YXLikeExcelDemo.app */,
+				846ABC3425A6DE140076F4B9 /* YXLikeExcelDemoTests.xctest */,
+				846ABC3F25A6DE140076F4B9 /* YXLikeExcelDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		846ABC1B25A6DE120076F4B9 /* YXLikeExcelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC5425A6DEF50076F4B9 /* YXExcelObject */,
+				846ABC1C25A6DE120076F4B9 /* AppDelegate.h */,
+				846ABC1D25A6DE120076F4B9 /* AppDelegate.m */,
+				846ABC2225A6DE120076F4B9 /* ViewController.h */,
+				846ABC2325A6DE120076F4B9 /* ViewController.m */,
+				846ABD4B25A70A220076F4B9 /* YXCategoryNSObject */,
+				846ABC2825A6DE140076F4B9 /* Assets.xcassets */,
+				846ABC2A25A6DE140076F4B9 /* LaunchScreen.storyboard */,
+				846ABC2D25A6DE140076F4B9 /* Info.plist */,
+				846ABC2E25A6DE140076F4B9 /* main.m */,
+				846ABCB425A6E5280076F4B9 /* PrefixHeader.pch */,
+			);
+			path = YXLikeExcelDemo;
+			sourceTree = "<group>";
+		};
+		846ABC3725A6DE140076F4B9 /* YXLikeExcelDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC3825A6DE140076F4B9 /* YXLikeExcelDemoTests.m */,
+				846ABC3A25A6DE140076F4B9 /* Info.plist */,
+			);
+			path = YXLikeExcelDemoTests;
+			sourceTree = "<group>";
+		};
+		846ABC4225A6DE140076F4B9 /* YXLikeExcelDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC4325A6DE140076F4B9 /* YXLikeExcelDemoUITests.m */,
+				846ABC4525A6DE140076F4B9 /* Info.plist */,
+			);
+			path = YXLikeExcelDemoUITests;
+			sourceTree = "<group>";
+		};
+		846ABC5425A6DEF50076F4B9 /* YXExcelObject */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC9525A6E1F60076F4B9 /* Model */,
+				846ABC5E25A6DF370076F4B9 /* View */,
+			);
+			path = YXExcelObject;
+			sourceTree = "<group>";
+		};
+		846ABC5E25A6DF370076F4B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846ABCD025A6EE4A0076F4B9 /* YXExcelObjDetailView */,
+				846ABC6F25A6E00F0076F4B9 /* YXExcelObjBgView */,
+				846ABCDA25A6F31E0076F4B9 /* YXExcelObjPublicView */,
+				846ABC6525A6DF820076F4B9 /* YXExcelObjBaseView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846ABC6525A6DF820076F4B9 /* YXExcelObjBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC6725A6DF820076F4B9 /* YXExcelObjBaseView.h */,
+				846ABC6625A6DF820076F4B9 /* YXExcelObjBaseView.m */,
+			);
+			path = YXExcelObjBaseView;
+			sourceTree = "<group>";
+		};
+		846ABC6F25A6E00F0076F4B9 /* YXExcelObjBgView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABCB925A6E9BE0076F4B9 /* YXExcelObjBgSecHeaderView */,
+				846ABCB825A6E9BE0076F4B9 /* YXExcelObjBgViewCell */,
+				846ABC7D25A6E0DB0076F4B9 /* YXExcelObjBgView.h */,
+				846ABC7E25A6E0DB0076F4B9 /* YXExcelObjBgView.m */,
+			);
+			path = YXExcelObjBgView;
+			sourceTree = "<group>";
+		};
+		846ABC9525A6E1F60076F4B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				846ABC9425A6E19D0076F4B9 /* YXExcelObjDelegate.h */,
+				846ABC9625A6E2100076F4B9 /* YXExcelObjBaseModel.h */,
+				846ABC9725A6E2100076F4B9 /* YXExcelObjBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		846ABCB825A6E9BE0076F4B9 /* YXExcelObjBgViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				846ABCC825A6EC710076F4B9 /* YXExcelObjBgViewCell.h */,
+				846ABCC925A6EC710076F4B9 /* YXExcelObjBgViewCell.m */,
+				846ABCCA25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib */,
+			);
+			path = YXExcelObjBgViewCell;
+			sourceTree = "<group>";
+		};
+		846ABCB925A6E9BE0076F4B9 /* YXExcelObjBgSecHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABCBA25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.h */,
+				846ABCBB25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m */,
+				846ABCC325A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib */,
+			);
+			path = YXExcelObjBgSecHeaderView;
+			sourceTree = "<group>";
+		};
+		846ABCD025A6EE4A0076F4B9 /* YXExcelObjDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD3325A701400076F4B9 /* YXExcelObjDetailCell */,
+				846ABCD125A6F1040076F4B9 /* YXExcelObjDetailView.h */,
+				846ABCD225A6F1040076F4B9 /* YXExcelObjDetailView.m */,
+			);
+			path = YXExcelObjDetailView;
+			sourceTree = "<group>";
+		};
+		846ABCDA25A6F31E0076F4B9 /* YXExcelObjPublicView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD0F25A6FA3F0076F4B9 /* YXExcelObjMsgView */,
+				846ABD0E25A6F9E20076F4B9 /* YXExcelObjBasicView */,
+				846ABD1025A6FA9A0076F4B9 /* YXExcelObjChooseView */,
+			);
+			path = YXExcelObjPublicView;
+			sourceTree = "<group>";
+		};
+		846ABD0E25A6F9E20076F4B9 /* YXExcelObjBasicView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD1F25A6FC2A0076F4B9 /* YXExcelObjBasicView.h */,
+				846ABD2025A6FC2A0076F4B9 /* YXExcelObjBasicView.m */,
+			);
+			path = YXExcelObjBasicView;
+			sourceTree = "<group>";
+		};
+		846ABD0F25A6FA3F0076F4B9 /* YXExcelObjMsgView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YXExcelObjMsgView;
+			sourceTree = "<group>";
+		};
+		846ABD1025A6FA9A0076F4B9 /* YXExcelObjChooseView */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD1125A6FAAB0076F4B9 /* YXExcelObjChooseView.h */,
+				846ABD1225A6FAAB0076F4B9 /* YXExcelObjChooseView.m */,
+				846ABD1A25A6FAB40076F4B9 /* YXExcelObjChooseView.xib */,
+			);
+			path = YXExcelObjChooseView;
+			sourceTree = "<group>";
+		};
+		846ABD3325A701400076F4B9 /* YXExcelObjDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD3525A701400076F4B9 /* YXExcelObjDetailCell.h */,
+				846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */,
+			);
+			path = YXExcelObjDetailCell;
+			sourceTree = "<group>";
+		};
+		846ABD4B25A70A220076F4B9 /* YXCategoryNSObject */ = {
+			isa = PBXGroup;
+			children = (
+				846ABD4C25A70A220076F4B9 /* NSObject+YXCategory.h */,
+				846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */,
+			);
+			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		AA18D19EE7F59298F1D95C8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE78F181227266BB90285CD0 /* Pods-YXLikeExcelDemo.debug.xcconfig */,
+				90D569F0C1D3487AD78DC119 /* Pods-YXLikeExcelDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2B38D5D543385AD0FB5E01E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7AE6C73B7AA9F52824093B /* libPods-YXLikeExcelDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		846ABC1825A6DE120076F4B9 /* YXLikeExcelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846ABC4825A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemo" */;
+			buildPhases = (
+				390BA2AFA0D50B90552D5ACE /* [CP] Check Pods Manifest.lock */,
+				846ABC1525A6DE120076F4B9 /* Sources */,
+				846ABC1625A6DE120076F4B9 /* Frameworks */,
+				846ABC1725A6DE120076F4B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXLikeExcelDemo;
+			productName = YXLikeExcelDemo;
+			productReference = 846ABC1925A6DE120076F4B9 /* YXLikeExcelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		846ABC3325A6DE140076F4B9 /* YXLikeExcelDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846ABC4B25A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemoTests" */;
+			buildPhases = (
+				846ABC3025A6DE140076F4B9 /* Sources */,
+				846ABC3125A6DE140076F4B9 /* Frameworks */,
+				846ABC3225A6DE140076F4B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846ABC3625A6DE140076F4B9 /* PBXTargetDependency */,
+			);
+			name = YXLikeExcelDemoTests;
+			productName = YXLikeExcelDemoTests;
+			productReference = 846ABC3425A6DE140076F4B9 /* YXLikeExcelDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		846ABC3E25A6DE140076F4B9 /* YXLikeExcelDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846ABC4E25A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemoUITests" */;
+			buildPhases = (
+				846ABC3B25A6DE140076F4B9 /* Sources */,
+				846ABC3C25A6DE140076F4B9 /* Frameworks */,
+				846ABC3D25A6DE140076F4B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846ABC4125A6DE140076F4B9 /* PBXTargetDependency */,
+			);
+			name = YXLikeExcelDemoUITests;
+			productName = YXLikeExcelDemoUITests;
+			productReference = 846ABC3F25A6DE140076F4B9 /* YXLikeExcelDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		846ABC1125A6DE120076F4B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					846ABC1825A6DE120076F4B9 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					846ABC3325A6DE140076F4B9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 846ABC1825A6DE120076F4B9;
+					};
+					846ABC3E25A6DE140076F4B9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 846ABC1825A6DE120076F4B9;
+					};
+				};
+			};
+			buildConfigurationList = 846ABC1425A6DE120076F4B9 /* Build configuration list for PBXProject "YXLikeExcelDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 846ABC1025A6DE120076F4B9;
+			productRefGroup = 846ABC1A25A6DE120076F4B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				846ABC1825A6DE120076F4B9 /* YXLikeExcelDemo */,
+				846ABC3325A6DE140076F4B9 /* YXLikeExcelDemoTests */,
+				846ABC3E25A6DE140076F4B9 /* YXLikeExcelDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		846ABC1725A6DE120076F4B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846ABC2C25A6DE140076F4B9 /* LaunchScreen.storyboard in Resources */,
+				846ABC2925A6DE140076F4B9 /* Assets.xcassets in Resources */,
+				846ABD1B25A6FAB40076F4B9 /* YXExcelObjChooseView.xib in Resources */,
+				846ABCCC25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib in Resources */,
+				846ABCC425A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3225A6DE140076F4B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3D25A6DE140076F4B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		390BA2AFA0D50B90552D5ACE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YXLikeExcelDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		846ABC1525A6DE120076F4B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846ABC6825A6DF820076F4B9 /* YXExcelObjBaseView.m in Sources */,
+				846ABD3625A701400076F4B9 /* YXExcelObjDetailCell.m in Sources */,
+				846ABC2425A6DE120076F4B9 /* ViewController.m in Sources */,
+				846ABD2125A6FC2A0076F4B9 /* YXExcelObjBasicView.m in Sources */,
+				846ABC9825A6E2100076F4B9 /* YXExcelObjBaseModel.m in Sources */,
+				846ABCBC25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m in Sources */,
+				846ABCD325A6F1040076F4B9 /* YXExcelObjDetailView.m in Sources */,
+				846ABD1325A6FAAB0076F4B9 /* YXExcelObjChooseView.m in Sources */,
+				846ABC7F25A6E0DB0076F4B9 /* YXExcelObjBgView.m in Sources */,
+				846ABCCB25A6EC710076F4B9 /* YXExcelObjBgViewCell.m in Sources */,
+				846ABC1E25A6DE120076F4B9 /* AppDelegate.m in Sources */,
+				846ABD4E25A70A220076F4B9 /* NSObject+YXCategory.m in Sources */,
+				846ABC2F25A6DE140076F4B9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3025A6DE140076F4B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846ABC3925A6DE140076F4B9 /* YXLikeExcelDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ABC3B25A6DE140076F4B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846ABC4425A6DE140076F4B9 /* YXLikeExcelDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		846ABC3625A6DE140076F4B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846ABC1825A6DE120076F4B9 /* YXLikeExcelDemo */;
+			targetProxy = 846ABC3525A6DE140076F4B9 /* PBXContainerItemProxy */;
+		};
+		846ABC4125A6DE140076F4B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846ABC1825A6DE120076F4B9 /* YXLikeExcelDemo */;
+			targetProxy = 846ABC4025A6DE140076F4B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		846ABC2A25A6DE140076F4B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846ABC2B25A6DE140076F4B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		846ABC4625A6DE140076F4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		846ABC4725A6DE140076F4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846ABC4925A6DE140076F4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE78F181227266BB90285CD0 /* Pods-YXLikeExcelDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HSQ24Z864;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YXLikeExcelDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = YXLikeExcelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		846ABC4A25A6DE140076F4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D569F0C1D3487AD78DC119 /* Pods-YXLikeExcelDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HSQ24Z864;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YXLikeExcelDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = YXLikeExcelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		846ABC4C25A6DE140076F4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXLikeExcelDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YXLikeExcelDemo.app/YXLikeExcelDemo";
+			};
+			name = Debug;
+		};
+		846ABC4D25A6DE140076F4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXLikeExcelDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YXLikeExcelDemo.app/YXLikeExcelDemo";
+			};
+			name = Release;
+		};
+		846ABC4F25A6DE140076F4B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXLikeExcelDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YXLikeExcelDemo;
+			};
+			name = Debug;
+		};
+		846ABC5025A6DE140076F4B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YXLikeExcelDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXLikeExcelDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YXLikeExcelDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		846ABC1425A6DE120076F4B9 /* Build configuration list for PBXProject "YXLikeExcelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846ABC4625A6DE140076F4B9 /* Debug */,
+				846ABC4725A6DE140076F4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846ABC4825A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846ABC4925A6DE140076F4B9 /* Debug */,
+				846ABC4A25A6DE140076F4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846ABC4B25A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846ABC4C25A6DE140076F4B9 /* Debug */,
+				846ABC4D25A6DE140076F4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846ABC4E25A6DE140076F4B9 /* Build configuration list for PBXNativeTarget "YXLikeExcelDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846ABC4F25A6DE140076F4B9 /* Debug */,
+				846ABC5025A6DE140076F4B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 846ABC1125A6DE120076F4B9 /* Project object */;
+}
