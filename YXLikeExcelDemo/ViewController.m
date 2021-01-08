@@ -57,10 +57,16 @@
 - (void)yxExcelObjScrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (scrollView == self.bgView.tableView) {
+        self.detailView.fixedDetailView.tableView.contentOffset = scrollView.contentOffset;
         self.detailView.tableView.contentOffset = scrollView.contentOffset;
     }
-    else {
+    else if (scrollView == self.detailView.tableView) {
         self.bgView.tableView.contentOffset = scrollView.contentOffset;
+        self.detailView.fixedDetailView.tableView.contentOffset = scrollView.contentOffset;
+    }
+    else {
+        self.detailView.fixedDetailView.tableView.contentOffset = scrollView.contentOffset;
+        self.detailView.tableView.contentOffset = scrollView.contentOffset;
     }
 }
 

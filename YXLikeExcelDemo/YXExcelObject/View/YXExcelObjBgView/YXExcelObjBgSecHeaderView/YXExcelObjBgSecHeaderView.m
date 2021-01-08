@@ -11,8 +11,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.bgView.backgroundColor = [UIColor greenColor];
+
 }
 
 @end

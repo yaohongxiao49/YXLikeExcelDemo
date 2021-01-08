@@ -12,9 +12,52 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YXExcelObjChooseView">
             <rect key="frame" x="0.0" y="0.0" width="92" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共x个项目" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZk-Tn-s2v">
+                    <rect key="frame" x="8" y="30" width="76" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="NBT-MF-eqt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-eM-vUe">
+                    <rect key="frame" x="10" y="52" width="52" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="eFB-j0-84b"/>
+                    </constraints>
+                    <state key="normal" title="差异"/>
+                    <connections>
+                        <action selector="progressOnlyDifferentBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="llw-X1-0pf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅看差异" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW6-zz-DQ7">
+                    <rect key="frame" x="8" y="93" width="76" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KW6-zz-DQ7" firstAttribute="leading" secondItem="gZk-Tn-s2v" secondAttribute="leading" id="1Zy-85-BNS"/>
+                <constraint firstItem="ZWp-eM-vUe" firstAttribute="top" secondItem="gZk-Tn-s2v" secondAttribute="bottom" constant="10" id="5YB-sp-IG2"/>
+                <constraint firstAttribute="trailing" secondItem="gZk-Tn-s2v" secondAttribute="trailing" constant="8" id="AGC-vv-ycH"/>
+                <constraint firstItem="KW6-zz-DQ7" firstAttribute="trailing" secondItem="gZk-Tn-s2v" secondAttribute="trailing" id="HPv-U5-Yka"/>
+                <constraint firstItem="gZk-Tn-s2v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Jg2-03-XoF"/>
+                <constraint firstItem="KW6-zz-DQ7" firstAttribute="top" secondItem="ZWp-eM-vUe" secondAttribute="bottom" constant="8" id="NA6-Eu-Gb1"/>
+                <constraint firstItem="ZWp-eM-vUe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="c3k-4a-9oY"/>
+                <constraint firstAttribute="trailing" secondItem="ZWp-eM-vUe" secondAttribute="trailing" constant="30" id="koD-h5-r42"/>
+                <constraint firstItem="gZk-Tn-s2v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="pKH-Ra-Joc"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="141" y="138"/>
+            <connections>
+                <outlet property="onlyDifferentBtn" destination="ZWp-eM-vUe" id="879-es-a27"/>
+                <outlet property="onlyDifferentDiscribeLab" destination="KW6-zz-DQ7" id="eWs-8r-g0t"/>
+                <outlet property="projNumLab" destination="gZk-Tn-s2v" id="0Hv-a5-Tfz"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="137.94642857142856"/>
         </view>
     </objects>
 </document>

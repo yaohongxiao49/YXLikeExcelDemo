@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,8 +15,39 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaC-xd-0MJ">
+                        <rect key="frame" x="0.0" y="0.0" width="92" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj1-e3-Msc">
+                                <rect key="frame" x="7" y="14.5" width="19" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sj1-e3-Msc" secondAttribute="trailing" constant="7" id="32Q-TT-OmV"/>
+                            <constraint firstItem="sj1-e3-Msc" firstAttribute="centerY" secondItem="BaC-xd-0MJ" secondAttribute="centerY" id="9xV-LC-SP2"/>
+                            <constraint firstAttribute="width" constant="92" id="FSQ-DQ-tHl"/>
+                            <constraint firstItem="sj1-e3-Msc" firstAttribute="leading" secondItem="BaC-xd-0MJ" secondAttribute="leading" constant="7" id="JGF-8A-kIi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="BaC-xd-0MJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IiH-QC-Vku"/>
+                    <constraint firstAttribute="bottom" secondItem="BaC-xd-0MJ" secondAttribute="bottom" id="SnB-aJ-frs"/>
+                    <constraint firstItem="BaC-xd-0MJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aKI-HD-Pmz"/>
+                </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bgVConstraintWidth" destination="FSQ-DQ-tHl" id="NFf-4h-Lpg"/>
+                <outlet property="bgView" destination="BaC-xd-0MJ" id="kog-Ml-2hU"/>
+                <outlet property="titleLab" destination="sj1-e3-Msc" id="PpX-81-nZy"/>
+            </connections>
             <point key="canvasLocation" x="142" y="138"/>
         </tableViewCell>
     </objects>

@@ -11,10 +11,11 @@
 #import "YXExcelObjDetailCell.h"
 #import "YXExcelObjDetailSecHeaderView.h"
 
-@interface YXExcelObjDetailView () <UITableViewDelegate, UITableViewDataSource>
+@interface YXExcelObjDetailView () <UITableViewDelegate, UITableViewDataSource, YXExcelObjDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollVeiw;
 @property (nonatomic, strong) YXExcelObjBasicView *basicView;
+@property (nonatomic, assign) BOOL boolFixed;
 
 @end
 
@@ -41,12 +42,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXExcelObjDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YXExcelObjDetailCell class])];
+    [cell reloadValueByIndexPath:indexPath arr:(NSMutableArray *)self.dataSourceArr];
     
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    _boolFixed =! _boolFixed;
+    self.dataSourceArr = self.dataSourceArr;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     YXExcelObjDetailSecHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([YXExcelObjDetailSecHeaderView class])];
+    
     return view;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,10 +78,33 @@
     }
 }
 
+#pragma mark - <YXExcelObjDelegate>
+- (void)yxExcelObjScrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    [self scrollViewDidScroll:scrollView];
+}
+
 #pragma mark - setting
 - (void)setDataSourceArr:(NSArray *)dataSourceArr {
     
     _dataSourceArr = dataSourceArr;
+    
+    if (_boolFixed) {
+        self.fixedDetailView.hidden = NO;
+        self.fixedDetailView.dataSourceArr = _dataSourceArr;
+        [self.fixedDetailView mas_updateConstraints:^(MASConstraintMaker *make) {
+           
+            make.width.mas_equalTo(kCellWidth);
+        }];
+    }
+    else {
+        self.fixedDetailView.hidden = YES;
+        [self.fixedDetailView mas_updateConstraints:^(MASConstraintMaker *make) {
+           
+            make.width.mas_equalTo(0);
+        }];
+    }
+    self.basicView.dataSourceArr = _dataSourceArr;
     
     self.scrollVeiw.contentSize = CGSizeMake(_dataSourceArr.count *kCellWidth, 0);
     [self.basicView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -88,7 +119,6 @@
         make.left.and.bottom.equalTo(self);
         make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
     }];
-    
     [self.tableView reloadData];
 }
 
@@ -146,10 +176,27 @@
         
         [_scrollVeiw mas_makeConstraints:^(MASConstraintMaker *make) {
            
-            make.edges.equalTo(self);
+            make.top.and.right.and.bottom.equalTo(self);
+            make.left.equalTo(self.fixedDetailView.mas_right);
         }];
     }
     return _scrollVeiw;
+}
+- (YXExcelObjFixedDetailView *)fixedDetailView {
+    
+    if (!_fixedDetailView) {
+        _fixedDetailView = [[YXExcelObjFixedDetailView alloc] initWithFrame:self.bounds];
+        _fixedDetailView.hidden = YES;
+        _fixedDetailView.delegate = self;
+        [self addSubview:_fixedDetailView];
+        
+        [_fixedDetailView mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.left.and.top.and.bottom.equalTo(self);
+            make.width.mas_equalTo(kCellWidth);
+        }];
+    }
+    return _fixedDetailView;
 }
 
 @end

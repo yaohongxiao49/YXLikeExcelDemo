@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YXExcelObjBaseModel : NSObject
 
+/** 是否固定 */
+@property (nonatomic, assign) BOOL boolFixed;
+
 @end
 
 NS_ASSUME_NONNULL_END

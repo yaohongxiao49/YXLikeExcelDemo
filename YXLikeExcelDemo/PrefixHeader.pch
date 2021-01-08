@@ -13,5 +13,7 @@
 
 #import <Masonry/Masonry.h>
 #import "NSObject+YXCategory.h"
+#import "YXPublicMethod.h"
+#import "UIColor+YXColor.h"
 
 #endif /* PrefixHeader_pch */

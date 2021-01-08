@@ -28,6 +28,13 @@
 		846ABD3625A701400076F4B9 /* YXExcelObjDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */; };
 		846ABD4E25A70A220076F4B9 /* NSObject+YXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */; };
 		8495E1B625A826090046987F /* YXExcelObjDetailSecHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */; };
+		8495E1C025A844C40046987F /* YXExcelObjFixedDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1BF25A844C40046987F /* YXExcelObjFixedDetailView.m */; };
+		8495E1C925A84F3A0046987F /* YXPublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1C825A84F3A0046987F /* YXPublicMethod.m */; };
+		8495E1CF25A850020046987F /* UIColor+YXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1CE25A850020046987F /* UIColor+YXColor.m */; };
+		8495E1D925A858D40046987F /* YXExcelObjBasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1D725A858D40046987F /* YXExcelObjBasicCell.m */; };
+		8495E1DA25A858D40046987F /* YXExcelObjBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8495E1D825A858D40046987F /* YXExcelObjBasicCell.xib */; };
+		8495E1E125A862E80046987F /* YXExcelObjDetailMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1DF25A862E80046987F /* YXExcelObjDetailMsgCell.m */; };
+		8495E1E225A862E80046987F /* YXExcelObjDetailMsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8495E1E025A862E80046987F /* YXExcelObjDetailMsgCell.xib */; };
 		CD8CFCFFB8D1C0BA528809E6 /* libPods-YXLikeExcelDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7AE6C73B7AA9F52824093B /* libPods-YXLikeExcelDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +99,18 @@
 		846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YXCategory.m"; sourceTree = "<group>"; };
 		8495E1B425A826090046987F /* YXExcelObjDetailSecHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailSecHeaderView.h; sourceTree = "<group>"; };
 		8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjDetailSecHeaderView.m; sourceTree = "<group>"; };
+		8495E1BE25A844C40046987F /* YXExcelObjFixedDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjFixedDetailView.h; sourceTree = "<group>"; };
+		8495E1BF25A844C40046987F /* YXExcelObjFixedDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjFixedDetailView.m; sourceTree = "<group>"; };
+		8495E1C725A84F3A0046987F /* YXPublicMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXPublicMethod.h; sourceTree = "<group>"; };
+		8495E1C825A84F3A0046987F /* YXPublicMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXPublicMethod.m; sourceTree = "<group>"; };
+		8495E1CD25A850020046987F /* UIColor+YXColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YXColor.h"; sourceTree = "<group>"; };
+		8495E1CE25A850020046987F /* UIColor+YXColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YXColor.m"; sourceTree = "<group>"; };
+		8495E1D625A858D40046987F /* YXExcelObjBasicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjBasicCell.h; sourceTree = "<group>"; };
+		8495E1D725A858D40046987F /* YXExcelObjBasicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjBasicCell.m; sourceTree = "<group>"; };
+		8495E1D825A858D40046987F /* YXExcelObjBasicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXExcelObjBasicCell.xib; sourceTree = "<group>"; };
+		8495E1DE25A862E80046987F /* YXExcelObjDetailMsgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailMsgCell.h; sourceTree = "<group>"; };
+		8495E1DF25A862E80046987F /* YXExcelObjDetailMsgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjDetailMsgCell.m; sourceTree = "<group>"; };
+		8495E1E025A862E80046987F /* YXExcelObjDetailMsgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXExcelObjDetailMsgCell.xib; sourceTree = "<group>"; };
 		90D569F0C1D3487AD78DC119 /* Pods-YXLikeExcelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.release.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE78F181227266BB90285CD0 /* Pods-YXLikeExcelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +171,10 @@
 				846ABC1D25A6DE120076F4B9 /* AppDelegate.m */,
 				846ABC2225A6DE120076F4B9 /* ViewController.h */,
 				846ABC2325A6DE120076F4B9 /* ViewController.m */,
+				8495E1C725A84F3A0046987F /* YXPublicMethod.h */,
+				8495E1C825A84F3A0046987F /* YXPublicMethod.m */,
+				8495E1CD25A850020046987F /* UIColor+YXColor.h */,
+				8495E1CE25A850020046987F /* UIColor+YXColor.m */,
 				846ABD4B25A70A220076F4B9 /* YXCategoryNSObject */,
 				846ABC2825A6DE140076F4B9 /* Assets.xcassets */,
 				846ABC2A25A6DE140076F4B9 /* LaunchScreen.storyboard */,
@@ -192,6 +215,7 @@
 		846ABC5E25A6DF370076F4B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8495E1BD25A844A80046987F /* YXExcelObjFixedDetailView */,
 				846ABCD025A6EE4A0076F4B9 /* YXExcelObjDetailView */,
 				846ABC6F25A6E00F0076F4B9 /* YXExcelObjBgView */,
 				846ABCDA25A6F31E0076F4B9 /* YXExcelObjPublicView */,
@@ -264,7 +288,6 @@
 		846ABCDA25A6F31E0076F4B9 /* YXExcelObjPublicView */ = {
 			isa = PBXGroup;
 			children = (
-				846ABD0F25A6FA3F0076F4B9 /* YXExcelObjMsgView */,
 				846ABD0E25A6F9E20076F4B9 /* YXExcelObjBasicView */,
 				846ABD1025A6FA9A0076F4B9 /* YXExcelObjChooseView */,
 			);
@@ -276,15 +299,11 @@
 			children = (
 				846ABD1F25A6FC2A0076F4B9 /* YXExcelObjBasicView.h */,
 				846ABD2025A6FC2A0076F4B9 /* YXExcelObjBasicView.m */,
+				8495E1D625A858D40046987F /* YXExcelObjBasicCell.h */,
+				8495E1D725A858D40046987F /* YXExcelObjBasicCell.m */,
+				8495E1D825A858D40046987F /* YXExcelObjBasicCell.xib */,
 			);
 			path = YXExcelObjBasicView;
-			sourceTree = "<group>";
-		};
-		846ABD0F25A6FA3F0076F4B9 /* YXExcelObjMsgView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = YXExcelObjMsgView;
 			sourceTree = "<group>";
 		};
 		846ABD1025A6FA9A0076F4B9 /* YXExcelObjChooseView */ = {
@@ -302,6 +321,9 @@
 			children = (
 				846ABD3525A701400076F4B9 /* YXExcelObjDetailCell.h */,
 				846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */,
+				8495E1DE25A862E80046987F /* YXExcelObjDetailMsgCell.h */,
+				8495E1DF25A862E80046987F /* YXExcelObjDetailMsgCell.m */,
+				8495E1E025A862E80046987F /* YXExcelObjDetailMsgCell.xib */,
 			);
 			path = YXExcelObjDetailCell;
 			sourceTree = "<group>";
@@ -322,6 +344,15 @@
 				8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */,
 			);
 			path = YXExcelObjDetailSecHeaderView;
+			sourceTree = "<group>";
+		};
+		8495E1BD25A844A80046987F /* YXExcelObjFixedDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				8495E1BE25A844C40046987F /* YXExcelObjFixedDetailView.h */,
+				8495E1BF25A844C40046987F /* YXExcelObjFixedDetailView.m */,
+			);
+			path = YXExcelObjFixedDetailView;
 			sourceTree = "<group>";
 		};
 		AA18D19EE7F59298F1D95C8C /* Pods */ = {
@@ -449,6 +480,8 @@
 				846ABD1B25A6FAB40076F4B9 /* YXExcelObjChooseView.xib in Resources */,
 				846ABCCC25A6EC710076F4B9 /* YXExcelObjBgViewCell.xib in Resources */,
 				846ABCC425A6E9FE0076F4B9 /* YXExcelObjBgSecHeaderView.xib in Resources */,
+				8495E1DA25A858D40046987F /* YXExcelObjBasicCell.xib in Resources */,
+				8495E1E225A862E80046987F /* YXExcelObjDetailMsgCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,9 +531,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8495E1C025A844C40046987F /* YXExcelObjFixedDetailView.m in Sources */,
 				846ABC6825A6DF820076F4B9 /* YXExcelObjBaseView.m in Sources */,
+				8495E1CF25A850020046987F /* UIColor+YXColor.m in Sources */,
 				846ABD3625A701400076F4B9 /* YXExcelObjDetailCell.m in Sources */,
 				846ABC2425A6DE120076F4B9 /* ViewController.m in Sources */,
+				8495E1E125A862E80046987F /* YXExcelObjDetailMsgCell.m in Sources */,
 				846ABD2125A6FC2A0076F4B9 /* YXExcelObjBasicView.m in Sources */,
 				846ABC9825A6E2100076F4B9 /* YXExcelObjBaseModel.m in Sources */,
 				846ABCBC25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m in Sources */,
@@ -509,9 +545,11 @@
 				846ABD1325A6FAAB0076F4B9 /* YXExcelObjChooseView.m in Sources */,
 				846ABC7F25A6E0DB0076F4B9 /* YXExcelObjBgView.m in Sources */,
 				846ABCCB25A6EC710076F4B9 /* YXExcelObjBgViewCell.m in Sources */,
+				8495E1C925A84F3A0046987F /* YXPublicMethod.m in Sources */,
 				846ABC1E25A6DE120076F4B9 /* AppDelegate.m in Sources */,
 				846ABD4E25A70A220076F4B9 /* NSObject+YXCategory.m in Sources */,
 				846ABC2F25A6DE140076F4B9 /* main.m in Sources */,
+				8495E1D925A858D40046987F /* YXExcelObjBasicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
