@@ -9,6 +9,7 @@
 #import "YXExcelObjBasicView.h"
 #import "YXExcelObjBaseModel.h"
 #import "YXExcelObjDetailCell.h"
+#import "YXExcelObjDetailSecHeaderView.h"
 
 @interface YXExcelObjDetailView () <UITableViewDelegate, UITableViewDataSource>
 
@@ -43,9 +44,22 @@
     
     return cell;
 }
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    YXExcelObjDetailSecHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([YXExcelObjDetailSecHeaderView class])];
+    return view;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return kCellHeight;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return kVerticalSecHeight;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 0.01f;
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -63,17 +77,17 @@
     
     self.scrollVeiw.contentSize = CGSizeMake(_dataSourceArr.count *kCellWidth, 0);
     [self.basicView mas_remakeConstraints:^(MASConstraintMaker *make) {
-       
+
         make.left.and.top.equalTo(self.scrollVeiw);
         make.height.mas_equalTo(kChooseItemHeight);
         make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
     }];
-//    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//
-//        make.top.equalTo(self.basicView.mas_bottom).with.offset(kVerticalSecHeight);
-//        make.left.and.bottom.equalTo(self.scrollVeiw);
-//        make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
-//    }];
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.basicView.mas_bottom);
+        make.left.and.bottom.equalTo(self);
+        make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
+    }];
     
     [self.tableView reloadData];
 }
@@ -81,14 +95,14 @@
 #pragma mark - 初始化视图
 - (void)initView {
     
-    self.backgroundColor = [UIColor yellowColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - 懒加载
 - (UITableView *)tableView {
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.scrollVeiw.bounds];
+        _tableView = [[UITableView alloc] initWithFrame:self.scrollVeiw.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.bounces = NO;
@@ -98,12 +112,13 @@
         [self.scrollVeiw addSubview:_tableView];
         
         [_tableView registerClass:[YXExcelObjDetailCell class] forCellReuseIdentifier:NSStringFromClass([YXExcelObjDetailCell class])];
+        [_tableView registerClass:[YXExcelObjDetailSecHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([YXExcelObjDetailSecHeaderView class])];
         
-//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//
-//            make.top.equalTo(self.basicView.mas_bottom).with.offset(kVerticalSecHeight);
-//            make.left.and.right.and.bottom.equalTo(self.scrollVeiw);
-//        }];
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+            make.top.equalTo(self.basicView.mas_bottom);
+            make.left.and.right.and.bottom.equalTo(self);
+        }];
     }
     return _tableView;
 }

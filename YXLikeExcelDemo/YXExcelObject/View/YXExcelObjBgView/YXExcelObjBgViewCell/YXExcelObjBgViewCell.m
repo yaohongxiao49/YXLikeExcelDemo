@@ -13,7 +13,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.backgroundColor = [UIColor orangeColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

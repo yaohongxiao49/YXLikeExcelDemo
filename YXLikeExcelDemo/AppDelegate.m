@@ -23,7 +23,9 @@
     [self.window makeKeyAndVisible];
     
     if (@available(iOS 11.0, *)) {
-        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+        UITableView.appearance.estimatedRowHeight = 0;
+        UITableView.appearance.estimatedSectionFooterHeight = 0;
+        UITableView.appearance.estimatedSectionHeaderHeight = 0;
     }
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];

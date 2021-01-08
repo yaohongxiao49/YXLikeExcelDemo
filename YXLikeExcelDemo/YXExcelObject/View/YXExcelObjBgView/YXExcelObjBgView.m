@@ -60,6 +60,10 @@
     
     return kVerticalSecHeight;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 0.01f;
+}
 
 #pragma mark - <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -81,13 +85,12 @@
 #pragma mark - 初始化视图
 - (void)initView {
     
-    self.backgroundColor = [UIColor redColor];
 }
 
 #pragma mark - 懒加载
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.bounds];
+        _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.bounces = NO;

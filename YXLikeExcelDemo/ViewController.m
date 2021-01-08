@@ -31,7 +31,6 @@
     // Do any additional setup after loading the view.
     
     self.title = @"参数对比";
-    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -40,8 +39,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNofication:) name:kAddNofication object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNotification:) name:kDeleteNofication object:nil];
     
-    self.bgView.dataSourceArr = @[@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
-    self.detailView.dataSourceArr = @[@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
+    self.bgView.dataSourceArr = @[@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
+    self.detailView.dataSourceArr = @[@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
 }
 
 #pragma mark - 添加通知
@@ -70,6 +69,7 @@
     
     if (!_bgView) {
         _bgView = [[YXExcelObjBgView alloc] initWithFrame:self.view.bounds];
+        _bgView.delegate = self;
         [self.view addSubview:_bgView];
         
         [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,7 +84,8 @@
     
     if (!_detailView) {
         _detailView = [[YXExcelObjDetailView alloc] initWithFrame:self.view.bounds];
-        [self.bgView addSubview:_detailView];
+        _detailView.delegate = self;
+        [self.view addSubview:_detailView];
         
         [_detailView mas_makeConstraints:^(MASConstraintMaker *make) {
            

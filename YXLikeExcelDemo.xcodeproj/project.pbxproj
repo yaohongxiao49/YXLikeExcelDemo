@@ -27,6 +27,7 @@
 		846ABD2125A6FC2A0076F4B9 /* YXExcelObjBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD2025A6FC2A0076F4B9 /* YXExcelObjBasicView.m */; };
 		846ABD3625A701400076F4B9 /* YXExcelObjDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD3425A701400076F4B9 /* YXExcelObjDetailCell.m */; };
 		846ABD4E25A70A220076F4B9 /* NSObject+YXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */; };
+		8495E1B625A826090046987F /* YXExcelObjDetailSecHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */; };
 		CD8CFCFFB8D1C0BA528809E6 /* libPods-YXLikeExcelDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7AE6C73B7AA9F52824093B /* libPods-YXLikeExcelDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		846ABD3525A701400076F4B9 /* YXExcelObjDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailCell.h; sourceTree = "<group>"; };
 		846ABD4C25A70A220076F4B9 /* NSObject+YXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YXCategory.h"; sourceTree = "<group>"; };
 		846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YXCategory.m"; sourceTree = "<group>"; };
+		8495E1B425A826090046987F /* YXExcelObjDetailSecHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXExcelObjDetailSecHeaderView.h; sourceTree = "<group>"; };
+		8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXExcelObjDetailSecHeaderView.m; sourceTree = "<group>"; };
 		90D569F0C1D3487AD78DC119 /* Pods-YXLikeExcelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.release.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE78F181227266BB90285CD0 /* Pods-YXLikeExcelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXLikeExcelDemo.debug.xcconfig"; path = "Target Support Files/Pods-YXLikeExcelDemo/Pods-YXLikeExcelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +253,7 @@
 		846ABCD025A6EE4A0076F4B9 /* YXExcelObjDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				8495E1B325A825F60046987F /* YXExcelObjDetailSecHeaderView */,
 				846ABD3325A701400076F4B9 /* YXExcelObjDetailCell */,
 				846ABCD125A6F1040076F4B9 /* YXExcelObjDetailView.h */,
 				846ABCD225A6F1040076F4B9 /* YXExcelObjDetailView.m */,
@@ -309,6 +313,15 @@
 				846ABD4D25A70A220076F4B9 /* NSObject+YXCategory.m */,
 			);
 			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		8495E1B325A825F60046987F /* YXExcelObjDetailSecHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8495E1B425A826090046987F /* YXExcelObjDetailSecHeaderView.h */,
+				8495E1B525A826090046987F /* YXExcelObjDetailSecHeaderView.m */,
+			);
+			path = YXExcelObjDetailSecHeaderView;
 			sourceTree = "<group>";
 		};
 		AA18D19EE7F59298F1D95C8C /* Pods */ = {
@@ -492,6 +505,7 @@
 				846ABC9825A6E2100076F4B9 /* YXExcelObjBaseModel.m in Sources */,
 				846ABCBC25A6E9F10076F4B9 /* YXExcelObjBgSecHeaderView.m in Sources */,
 				846ABCD325A6F1040076F4B9 /* YXExcelObjDetailView.m in Sources */,
+				8495E1B625A826090046987F /* YXExcelObjDetailSecHeaderView.m in Sources */,
 				846ABD1325A6FAAB0076F4B9 /* YXExcelObjChooseView.m in Sources */,
 				846ABC7F25A6E0DB0076F4B9 /* YXExcelObjBgView.m in Sources */,
 				846ABCCB25A6EC710076F4B9 /* YXExcelObjBgViewCell.m in Sources */,
