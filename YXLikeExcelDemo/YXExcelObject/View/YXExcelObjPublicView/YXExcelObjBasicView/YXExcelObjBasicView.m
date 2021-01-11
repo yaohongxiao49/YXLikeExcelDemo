@@ -35,6 +35,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     YXExcelObjBasicCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([YXExcelObjBasicCell class]) forIndexPath:indexPath];
+    [cell reloadValueByIndexPath:indexPath arr:self.dataSourceArr originalDataSourceArr:self.originalDataSourceArr];
     
     return cell;
 }
@@ -56,9 +57,13 @@
 }
 
 #pragma mark - setting
-- (void)setDataSourceArr:(NSArray *)dataSourceArr {
+- (void)setDataSourceArr:(NSMutableArray *)dataSourceArr {
     
     _dataSourceArr = dataSourceArr;
+}
+- (void)setOriginalDataSourceArr:(NSMutableArray *)originalDataSourceArr {
+    
+    _originalDataSourceArr = originalDataSourceArr;
     
     [self.collectionView reloadData];
 }

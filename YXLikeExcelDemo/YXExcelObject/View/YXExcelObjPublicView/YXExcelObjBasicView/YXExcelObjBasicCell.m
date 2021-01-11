@@ -7,6 +7,13 @@
 
 #import "YXExcelObjBasicCell.h"
 
+@interface YXExcelObjBasicCell ()
+
+@property (nonatomic, strong) NSMutableArray *arr;
+@property (nonatomic, strong) YXExcelObjBaseModel *model;
+
+@end
+
 @implementation YXExcelObjBasicCell
 
 - (void)layoutSubviews {
@@ -28,9 +35,16 @@
 
 #pragma mark - method
 #pragma mark - 刷新数据
-- (void)reloadValueByIndexPath:(NSIndexPath *)indexPath arr:(NSMutableArray *)arr {
+- (void)reloadValueByIndexPath:(NSIndexPath *)indexPath arr:(NSMutableArray *)arr originalDataSourceArr:(NSMutableArray *)originalDataSourceArr {
     
+    _arr = originalDataSourceArr;
+    YXExcelObjBaseModel *model = arr[indexPath.row];
+    _model = model;
     
+    self.titleLab.text = _model.projName;
+    self.priceLab.text = _model.marketPrice;
+    
+    [self judgeFixedBtnShowByBoolFixed:_model.boolFixed];
 }
 #pragma mark - 判定固定按钮显示
 - (void)judgeFixedBtnShowByBoolFixed:(BOOL)boolFixed {
@@ -51,13 +65,29 @@
 #pragma mark - 固定按钮事件
 - (IBAction)progressFixedBtn:(UIButton *)sender {
     
-    sender.selected =! sender.selected;
-    [self judgeFixedBtnShowByBoolFixed:sender.selected];
+    _model.boolFixed =! _model.boolFixed;
+    [self judgeFixedBtnShowByBoolFixed:_model.boolFixed];
+    
+    __weak typeof(self) weakSelf = self;
+    [_arr enumerateObjectsUsingBlock:^(YXExcelObjBaseModel *  _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if (![model.ident isEqualToString:weakSelf.model.ident]) {
+            model.boolFixed = NO;
+        }
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFixedNotification object:@{@"valueArr":_arr}];
 }
 
 #pragma mark - 移除按钮事件
 - (IBAction)progressRemoveBtn:(UIButton *)sender {
     
+    if (_arr.count == 1) {
+        return;
+    }
+    else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDeleteNofication object:@{@"model":_model}];
+    }
 }
 
 @end

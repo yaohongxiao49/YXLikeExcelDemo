@@ -12,14 +12,14 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    [YXPublicMethod getSpecifiedFilletWithBorder:self.bgView corners:UIRectCornerAllCorners cornerRadii:CGSizeMake(0, 0) lineWidth:1 lineColor:[UIColor colorWithHexString:@"#EEEEEE"]];
+    [YXPublicMethod getSpecifiedFilletWithBorder:self.contentView corners:UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii:CGSizeMake(0, 0) lineWidth:1 lineColor:[UIColor colorWithHexString:@"#EEEEEE"]];
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     
-    [YXPublicMethod getSpecifiedFilletWithBorder:self.bgView corners:UIRectCornerAllCorners cornerRadii:CGSizeMake(0, 0) lineWidth:1 lineColor:[UIColor colorWithHexString:@"#EEEEEE"]];
+    [YXPublicMethod getSpecifiedFilletWithBorder:self.contentView corners:UIRectCornerTopRight | UIRectCornerBottomRight cornerRadii:CGSizeMake(0, 0) lineWidth:1 lineColor:[UIColor colorWithHexString:@"#EEEEEE"]];
 }
 
 @end

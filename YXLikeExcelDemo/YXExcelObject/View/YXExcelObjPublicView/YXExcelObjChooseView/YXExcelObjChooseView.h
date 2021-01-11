@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YXExcelObjBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *onlyDifferentBtn;
 /** 仅显示差异描述 */
 @property (weak, nonatomic) IBOutlet UILabel *onlyDifferentDiscribeLab;
+
+/** 数据 */
+@property (nonatomic, copy) NSMutableArray *dataSourceArr;
 
 @end
 

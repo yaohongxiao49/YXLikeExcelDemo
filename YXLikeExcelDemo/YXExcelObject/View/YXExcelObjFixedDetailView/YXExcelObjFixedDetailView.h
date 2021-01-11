@@ -6,8 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "YXExcelObjBaseView.h"
 #import "YXExcelObjDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 表格视图 */
 @property (nonatomic, strong) UITableView *tableView;
 /** 数据 */
-@property (nonatomic, copy) NSArray *dataSourceArr;
+@property (nonatomic, strong) NSMutableArray *dataSourceArr;
+/** 原始数据 */
+@property (nonatomic, strong) NSMutableArray *originalDataSourceArr;
 
 /** 滚动协议代理 */
 @property (nonatomic, weak) id<YXExcelObjDelegate>delegate;

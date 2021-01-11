@@ -24,7 +24,7 @@
     
     if (self) {
         //设置tableView的交互区域
-        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, kChooseItemHeight, self.bounds.size.height)];
+        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, kChooseItemWidth, self.bounds.size.height)];
         self.path = path;
         
         [self initView];
@@ -35,21 +35,38 @@
 #pragma mark - <UITableViewDelegate, UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.dataSourceArr.count;
+    if (self.dataSourceArr.count == 0) {
+        return 0;
+    }
+    else {
+        YXExcelObjBaseModel *model = self.dataSourceArr[0];
+        return model.secArr.count;
+    }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataSourceArr.count;
+    YXExcelObjBaseModel *model = self.dataSourceArr[0];
+    YXExcelObjBaseInfoModel *infoModel = model.secArr[section];
+    return infoModel.differentMsgArr.count != 0 ? infoModel.differentMsgArr.count : infoModel.msgArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXExcelObjBgViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YXExcelObjBgViewCell class])];
+    YXExcelObjBaseModel *model = self.dataSourceArr[0];
+    YXExcelObjBaseInfoModel *infoModel = model.secArr[indexPath.section];
+    NSMutableArray *msgArr = infoModel.differentMsgArr.count != 0 ? infoModel.differentMsgArr : infoModel.msgArr;
+    YXExcelObjBaseInfoDetailModel *infoDetailModel = msgArr[indexPath.row];
+    cell.titleLab.text = infoDetailModel.msgTitle;
     
     return cell;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     YXExcelObjBgSecHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([YXExcelObjBgSecHeaderView class])];
+    YXExcelObjBaseModel *model = self.dataSourceArr[0];
+    YXExcelObjBaseInfoModel *infoModel = model.secArr[section];
+    view.titleLab.text = infoModel.secTitle;
+    
     return view;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,12 +91,12 @@
 }
 
 #pragma mark - setting
-- (void)setDataSourceArr:(NSArray *)dataSourceArr {
+- (void)setDataSourceArr:(NSMutableArray *)dataSourceArr {
     
     _dataSourceArr = dataSourceArr;
     
     [self.tableView reloadData];
-    self.chooseView.hidden = NO;
+    self.chooseView.dataSourceArr = _dataSourceArr;
 }
 
 #pragma mark - 初始化视图

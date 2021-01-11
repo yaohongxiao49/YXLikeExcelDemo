@@ -15,11 +15,16 @@
 
 @property (nonatomic, strong) UIScrollView *scrollVeiw;
 @property (nonatomic, strong) YXExcelObjBasicView *basicView;
-@property (nonatomic, assign) BOOL boolFixed;
+@property (nonatomic, strong) NSMutableArray *detailArr;
 
 @end
 
 @implementation YXExcelObjDetailView
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kFixedNotification object:nil];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -30,26 +35,40 @@
     return self;
 }
 
+#pragma mark - 添加通知
+- (void)fixedNotification:(NSNotification *)notification {
+    
+    NSDictionary *infoDic = [notification object];
+    NSMutableArray *arr = [infoDic objectForKey:@"valueArr"];
+    self.dataSourceArr = arr;
+}
+
 #pragma mark - <UITableViewDelegate, UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.dataSourceArr.count;
+    if (_detailArr.count == 0) {
+        return 0;
+    }
+    else {
+        YXExcelObjBaseModel *model = _detailArr[0];
+        return model.secArr.count;
+    }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataSourceArr.count;
+    YXExcelObjBaseModel *model = _detailArr[0];
+    YXExcelObjBaseInfoModel *infoModel = model.secArr[section];
+    return infoModel.differentMsgArr.count != 0 ? infoModel.differentMsgArr.count : infoModel.msgArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXExcelObjDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YXExcelObjDetailCell class])];
-    [cell reloadValueByIndexPath:indexPath arr:(NSMutableArray *)self.dataSourceArr];
+    [cell reloadValueByIndexPath:indexPath arr:_detailArr];
     
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    _boolFixed =! _boolFixed;
-    self.dataSourceArr = self.dataSourceArr;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
@@ -85,13 +104,27 @@
 }
 
 #pragma mark - setting
-- (void)setDataSourceArr:(NSArray *)dataSourceArr {
+- (void)setDataSourceArr:(NSMutableArray *)dataSourceArr {
     
     _dataSourceArr = dataSourceArr;
     
-    if (_boolFixed) {
+    __weak typeof(self) weakSelf = self;
+    
+    NSMutableArray *fixedArr = [[NSMutableArray alloc] init];
+    _detailArr = [[NSMutableArray alloc] init];
+    [_dataSourceArr enumerateObjectsUsingBlock:^(YXExcelObjBaseModel *  _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+        if (model.boolFixed) {
+            [fixedArr addObject:model];
+        }
+        else {
+            [weakSelf.detailArr addObject:model];
+        }
+    }];
+    
+    if (fixedArr.count != 0) {
         self.fixedDetailView.hidden = NO;
-        self.fixedDetailView.dataSourceArr = _dataSourceArr;
+        self.fixedDetailView.dataSourceArr = fixedArr;
         [self.fixedDetailView mas_updateConstraints:^(MASConstraintMaker *make) {
            
             make.width.mas_equalTo(kCellWidth);
@@ -104,21 +137,14 @@
             make.width.mas_equalTo(0);
         }];
     }
-    self.basicView.dataSourceArr = _dataSourceArr;
+    self.basicView.dataSourceArr = _detailArr;
+    self.basicView.originalDataSourceArr = self.dataSourceArr;
+    self.fixedDetailView.originalDataSourceArr = self.dataSourceArr;
     
-    self.scrollVeiw.contentSize = CGSizeMake(_dataSourceArr.count *kCellWidth, 0);
-    [self.basicView mas_remakeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.and.top.equalTo(self.scrollVeiw);
-        make.height.mas_equalTo(kChooseItemHeight);
-        make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
-    }];
-    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-
-        make.top.equalTo(self.basicView.mas_bottom);
-        make.left.and.bottom.equalTo(self);
-        make.width.mas_equalTo(_dataSourceArr.count *kCellWidth);
-    }];
+    self.scrollVeiw.contentSize = CGSizeMake(_detailArr.count *kCellWidth, 0);
+    self.basicView.frame = CGRectMake(0, 0, _detailArr.count *kCellWidth, kChooseItemHeight);
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.basicView.frame), _detailArr.count *kCellWidth, CGRectGetHeight(self.scrollVeiw.bounds) - CGRectGetMaxY(self.basicView.frame));
+    
     [self.tableView reloadData];
 }
 
@@ -126,6 +152,8 @@
 - (void)initView {
     
     self.backgroundColor = [UIColor clearColor];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fixedNotification:) name:kFixedNotification object:nil];
 }
 
 #pragma mark - 懒加载
@@ -143,12 +171,6 @@
         
         [_tableView registerClass:[YXExcelObjDetailCell class] forCellReuseIdentifier:NSStringFromClass([YXExcelObjDetailCell class])];
         [_tableView registerClass:[YXExcelObjDetailSecHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([YXExcelObjDetailSecHeaderView class])];
-        
-        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-
-            make.top.equalTo(self.basicView.mas_bottom);
-            make.left.and.right.and.bottom.equalTo(self);
-        }];
     }
     return _tableView;
 }
@@ -157,12 +179,6 @@
     if (!_basicView) {
         _basicView = [[YXExcelObjBasicView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.scrollVeiw.bounds), kChooseItemHeight)];
         [self.scrollVeiw addSubview:_basicView];
-        
-        [_basicView mas_makeConstraints:^(MASConstraintMaker *make) {
-           
-            make.left.and.right.and.top.equalTo(self.scrollVeiw);
-            make.height.mas_equalTo(kChooseItemHeight);
-        }];
     }
     return _basicView;
 }

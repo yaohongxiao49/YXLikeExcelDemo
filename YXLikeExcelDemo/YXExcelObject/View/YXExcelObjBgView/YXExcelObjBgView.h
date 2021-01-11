@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 表格视图 */
 @property (nonatomic, strong) UITableView *tableView;
 /** 数据 */
-@property (nonatomic, copy) NSArray *dataSourceArr;
+@property (nonatomic, copy) NSMutableArray *dataSourceArr;
 
 /** 滚动协议代理 */
 @property (nonatomic, weak) id<YXExcelObjDelegate>delegate;

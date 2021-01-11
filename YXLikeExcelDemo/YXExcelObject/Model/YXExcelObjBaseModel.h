@@ -6,11 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YXExcelObjDelegate.h"
+#import "YXExcelObjBaseInfoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+/** 添加 */
 #define kAddNofication @"addNofication"
+/** 移除 */
 #define kDeleteNofication @"deleteNofication"
+/** 固定 */
+#define kFixedNotification @"fixedNotification"
+/** 差异 */
+#define kDifferentNotification @"differentNotification"
 
 /** 左上角item宽度 */
 #define kChooseItemWidth 92.f
@@ -25,8 +33,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YXExcelObjBaseModel : NSObject
 
+/** 项目id */
+@property (nonatomic, copy) NSString *ident;
 /** 是否固定 */
 @property (nonatomic, assign) BOOL boolFixed;
+/** 项目名 */
+@property (nonatomic, copy) NSString *projName;
+/** 市场价 */
+@property (nonatomic, copy) NSString *marketPrice;
+
+/** 分组信息 */
+@property (nonatomic, strong) NSMutableArray *secArr;
+
+- (instancetype)initWithDic:(NSDictionary *)dic;
 
 @end
 

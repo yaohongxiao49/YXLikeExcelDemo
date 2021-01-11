@@ -40,6 +40,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bgView" destination="kTm-9H-SAu" id="hBZ-mA-W0P"/>
+                <outlet property="titleLab" destination="uBx-m9-GLw" id="1jP-vN-okb"/>
             </connections>
             <point key="canvasLocation" x="142" y="138"/>
         </view>

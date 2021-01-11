@@ -6,7 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YXExcelObjBaseView.h"
 #import "YXExcelObjDelegate.h"
 #import "YXExcelObjFixedDetailView.h"
 
@@ -19,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 固定表格视图 */
 @property (nonatomic, strong) YXExcelObjFixedDetailView *fixedDetailView;
 /** 数据 */
-@property (nonatomic, copy) NSArray *dataSourceArr;
+@property (nonatomic, copy) NSMutableArray *dataSourceArr;
 
 /** 滚动协议代理 */
 @property (nonatomic, weak) id<YXExcelObjDelegate>delegate;

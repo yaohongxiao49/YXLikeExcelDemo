@@ -7,7 +7,6 @@
 
 #import "YXExcelObjFixedDetailView.h"
 #import "YXExcelObjBasicView.h"
-#import "YXExcelObjBaseModel.h"
 #import "YXExcelObjDetailCell.h"
 #import "YXExcelObjDetailSecHeaderView.h"
 
@@ -31,15 +30,24 @@
 #pragma mark - <UITableViewDelegate, UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.dataSourceArr.count;
+    if (self.dataSourceArr.count == 0) {
+        return 0;
+    }
+    else {
+        YXExcelObjBaseModel *model = self.dataSourceArr[0];
+        return model.secArr.count;
+    }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataSourceArr.count;
+    YXExcelObjBaseModel *model = self.dataSourceArr[0];
+    YXExcelObjBaseInfoModel *infoModel = model.secArr[section];
+    return infoModel.differentMsgArr.count != 0 ? infoModel.differentMsgArr.count : infoModel.msgArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXExcelObjDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YXExcelObjDetailCell class])];
+    [cell reloadValueByIndexPath:indexPath arr:(NSMutableArray *)self.dataSourceArr];
     
     return cell;
 }
@@ -70,11 +78,17 @@
 }
 
 #pragma mark - setting
-- (void)setDataSourceArr:(NSArray *)dataSourceArr {
+- (void)setDataSourceArr:(NSMutableArray *)dataSourceArr {
     
     _dataSourceArr = dataSourceArr;
     
-    self.basicView.dataSourceArr = @[@""];
+    self.basicView.dataSourceArr = _dataSourceArr;
+}
+- (void)setOriginalDataSourceArr:(NSMutableArray *)originalDataSourceArr {
+    
+    _originalDataSourceArr = originalDataSourceArr;
+    
+    self.basicView.originalDataSourceArr = _originalDataSourceArr;
     [self.tableView reloadData];
 }
 

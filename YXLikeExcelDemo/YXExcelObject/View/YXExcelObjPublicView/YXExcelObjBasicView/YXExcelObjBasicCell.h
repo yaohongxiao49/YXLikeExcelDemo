@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YXExcelObjBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *priceLab;
 
 /** 刷新数据 */
-- (void)reloadValueByIndexPath:(NSIndexPath *)indexPath arr:(NSMutableArray *)arr;
+- (void)reloadValueByIndexPath:(NSIndexPath *)indexPath arr:(NSMutableArray *)arr originalDataSourceArr:(NSMutableArray *)originalDataSourceArr;
 
 @end
 

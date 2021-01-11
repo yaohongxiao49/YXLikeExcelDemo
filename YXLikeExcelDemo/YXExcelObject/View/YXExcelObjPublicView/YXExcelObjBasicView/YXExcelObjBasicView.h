@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 表格视图 */
 @property (nonatomic, strong) UICollectionView *collectionView;
 /** 数据 */
-@property (nonatomic, copy) NSArray *dataSourceArr;
+@property (nonatomic, strong) NSMutableArray *dataSourceArr;
+/** 原始数据 */
+@property (nonatomic, strong) NSMutableArray *originalDataSourceArr;
 
 @end
 
