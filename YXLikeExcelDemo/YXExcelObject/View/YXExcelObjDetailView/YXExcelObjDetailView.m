@@ -143,7 +143,7 @@
     
     self.scrollVeiw.contentSize = CGSizeMake(_detailArr.count *kCellWidth, 0);
     self.basicView.frame = CGRectMake(0, 0, _detailArr.count *kCellWidth, kChooseItemHeight);
-    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.basicView.frame), _detailArr.count *kCellWidth, CGRectGetHeight(self.scrollVeiw.bounds) - CGRectGetMaxY(self.basicView.frame));
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.basicView.frame), _detailArr.count *kCellWidth, CGRectGetHeight(self.scrollVeiw.frame) - CGRectGetMaxY(self.basicView.frame) - self.yxNaviHeight);
     
     [self.tableView reloadData];
 }

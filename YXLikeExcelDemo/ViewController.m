@@ -41,13 +41,64 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNotification:) name:kDeleteNofication object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(differentNotification:) name:kDifferentNotification object:nil];
     
-    NSDictionary *fDic = @{@"id":@"1", @"boolFixed":@(NO), @"projName":@"项目1", @"marketPrice":@"¥1000-10000", @"secArr":@[@{@"secTitle":@"通用信息", @"msgArr":@[@{@"msgTitle":@"适用部位", @"msgValue":@"大腿"}, @{@"msgTitle":@"适用人群", @"msgValue":@"20-50"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}]}, @{@"secTitle":@"效果信息", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"大肌"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}]};
+    NSDictionary *fDic = @{@"id":@"1",
+                           @"boolFixed":@(NO),
+                           @"projName":@"项目1",
+                           @"marketPrice":@"¥1000-10000", @"secArr":@[
+                                   @{@"secTitle":@"通用信息",
+                                     @"msgArr":@[
+                                             @{@"msgTitle":@"适用部位",
+                                               @"msgValue":@"大腿"},
+                                             @{@"msgTitle":@"适用人群",
+                                               @"msgValue":@"20-50"},
+                                             @{@"msgTitle":@"操作方式",
+                                               @"msgValue":@"手术"},
+                                             @{@"msgTitle":@"适用部位",
+                                               @"msgValue":@"大腿"},
+                                             @{@"msgTitle":@"适用人群",
+                                               @"msgValue":@"20-50"},
+                                             @{@"msgTitle":@"操作方式",
+                                               @"msgValue":@"手术"},
+                                             @{@"msgTitle":@"是否住院",
+                                               @"msgValue":@"是"}
+                                     ]},
+                                   @{@"secTitle":@"效果信息",
+                                     @"msgArr":@[
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"},
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"},
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"}
+                                     ]},
+                                   @{@"secTitle":@"优缺点对比",
+                                     @"msgArr":@[
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"},
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"},
+                                             @{@"msgTitle":@"功效",
+                                               @"msgValue":@"大肌"},
+                                             @{@"msgTitle":@"恢复时间",
+                                               @"msgValue":@"3个月"}
+                                     ]},
+                           ]};
     YXExcelObjBaseModel *fModel = [[YXExcelObjBaseModel alloc] initWithDic:fDic];
     
-    NSDictionary *sDic = @{@"id":@"2", @"boolFixed":@(NO), @"projName":@"项目2", @"marketPrice":@"¥1000-10000", @"secArr":@[@{@"secTitle":@"通用信息", @"msgArr":@[@{@"msgTitle":@"适用部位", @"msgValue":@"大腿"}, @{@"msgTitle":@"适用人群", @"msgValue":@"20-50"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}]}, @{@"secTitle":@"效果信息", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}]};
+    NSDictionary *sDic = @{@"id":@"2", @"boolFixed":@(NO), @"projName":@"项目2", @"marketPrice":@"¥1000-10000", @"secArr":@[@{@"secTitle":@"通用信息",  @"msgArr":@[@{@"msgTitle":@"适用部位", @"msgValue":@"大腿"}, @{@"msgTitle":@"适用人群", @"msgValue":@"20-50"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}, @{@"msgTitle":@"适用部位", @"msgValue":@"大腿"}, @{@"msgTitle":@"适用人群", @"msgValue":@"20-50"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}, @{@"msgTitle":@"是否住院", @"msgValue":@"是"}]}, @{@"secTitle":@"效果信息", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}, @{@"secTitle":@"优缺点对比", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"美白"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}]};
     YXExcelObjBaseModel *sModel = [[YXExcelObjBaseModel alloc] initWithDic:sDic];
     
-    NSDictionary *tDic = @{@"id":@"3", @"boolFixed":@(NO), @"projName":@"项目3", @"marketPrice":@"¥1000-10000", @"secArr":@[@{@"secTitle":@"通用信息", @"msgArr":@[@{@"msgTitle":@"适用部位", @"msgValue":@"植发"}, @{@"msgTitle":@"适用人群", @"msgValue":@"10-20"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}]}, @{@"secTitle":@"效果信息", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}]};
+    NSDictionary *tDic = @{@"id":@"3", @"boolFixed":@(NO), @"projName":@"项目3", @"marketPrice":@"¥1000-10000", @"secArr":@[@{@"secTitle":@"通用信息", @"msgArr":@[@{@"msgTitle":@"适用部位", @"msgValue":@"植发"}, @{@"msgTitle":@"适用人群", @"msgValue":@"10-20"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}, @{@"msgTitle":@"适用部位", @"msgValue":@"植发"}, @{@"msgTitle":@"适用人群", @"msgValue":@"10-20"}, @{@"msgTitle":@"操作方式", @"msgValue":@"手术"}, @{@"msgTitle":@"是否住院", @"msgValue":@"否"}]}, @{@"secTitle":@"效果信息", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}, @{@"secTitle":@"优缺点对比", @"msgArr":@[@{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}, @{@"msgTitle":@"功效", @"msgValue":@"植皮"}, @{@"msgTitle":@"恢复时间", @"msgValue":@"3个月"}]}]};
     YXExcelObjBaseModel *tModel = [[YXExcelObjBaseModel alloc] initWithDic:tDic];
     
     _dataSourceArr = [[NSMutableArray alloc] initWithArray:@[fModel, sModel, tModel]];
