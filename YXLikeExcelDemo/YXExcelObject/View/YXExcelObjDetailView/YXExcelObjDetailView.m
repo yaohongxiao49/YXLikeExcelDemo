@@ -143,7 +143,7 @@
     
     self.scrollVeiw.contentSize = CGSizeMake(_detailArr.count *kCellWidth, 0);
     self.basicView.frame = CGRectMake(0, 0, _detailArr.count *kCellWidth, kChooseItemHeight);
-    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.basicView.frame), _detailArr.count *kCellWidth, CGRectGetHeight(self.scrollVeiw.frame) - CGRectGetMaxY(self.basicView.frame) - self.yxNaviHeight);
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.basicView.frame), _detailArr.count *kCellWidth, CGRectGetHeight(self.scrollVeiw.frame) - CGRectGetMaxY(self.basicView.frame));
     
     [self.tableView reloadData];
 }
@@ -195,6 +195,9 @@
             make.top.and.right.and.bottom.equalTo(self);
             make.left.equalTo(self.fixedDetailView.mas_right);
         }];
+        
+        [_scrollVeiw setNeedsLayout];
+        [_scrollVeiw layoutIfNeeded];
     }
     return _scrollVeiw;
 }
